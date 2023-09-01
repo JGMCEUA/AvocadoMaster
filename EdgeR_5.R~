@@ -1,0 +1,70 @@
+#source("/home/xocanol/Documents/Analisis_transcrip/salida_R/comp_vs_tiem_0/EdgeR_5.R") ubicacion del script
+
+library(edgeR)
+
+counts.all<-read.table(file="/home/xocanol/Documents/Analisis_transcrip/counts/counts_all.txt",header=T, sep="\t",row.names=1)
+#head(counts.all) # ver datos
+
+#groups
+samples<-factor(c("IA.0","IA.1","IA.69","IA.24","IC.0","IC.1","IC.69","IC.24","QIA.0","QIA.1","QIA.69","QIA.24","QIC.0","QIC.1","QIC.69","QIC.24"))
+
+#Analisis completo
+y<- DGEList(counts.all,group=samples) #toda la matrix completa
+y<- y[rowSums(y$counts) >= 3, ]
+y<- calcNormFactors(y) #Normalizacion
+#y$samples #ver grupos y norm.factores
+
+#graficaMDS
+pdf(file="/home/xocanol/Documents/Analisis_transcrip/salida_R/plotMDS_edeR_5.pdf")
+plotMDS(y, main = "Distribución", xlim = c(-3, 3))
+dev.off()
+
+
+design <- model.matrix(~0+ samples) #los nombre sampleIA.0...etc
+
+colnames(design)<- levels(samples) #cambiar el nombre (IA.0...etc)
+
+#design: a los tratamientos se les resta los testigos
+
+contVector <- c(#"QvsnQ1"="(QIC.24+QIC.0+QIC.1+QIC.69)+(QIA.24+QIA.0+QIA.1+QIA.69)-(IC.24+IC.0+IC.1+IC.69)-(IA.24+IA.0+IA.1+IA.69)",
+#"QvsnQ2"="(QIA.0 - IA.0) + (QIA.1 - IA.1) + (QIA.69 - IA.69) + (QIA.24 - IA.24) + (QIC.0 - IC.0) + (QIC.1 - IC.1) + (QIC.69 - IC.69) + (QIC.24 - IC.24) + (IC.1 - IA.0) + (IC.69 - IA.0) + (IC.24 - IA.0)"
+"QIA_0vsIA"= "(QIA.0 - IA.0)", #COMPARACIONES POR PARES QUITOSANO NO INOCULADO VS TESTIGO
+"QIA_69vsIA"= "(QIA.69 - IA.0)",
+"QIA_24vsIA"= "(QIA.24 - IA.0)",
+"QIA_1vsIA"= "(QIA.1 - IA.0)",
+"QIC_0vsIC"= "(QIC.0 - IC.0)", #COMPARACIONES POR PARES QUITOSANO, INOCULADO VS TESTIGO
+"QIC_69vsIC"= "(QIC.69 - IC.0)",
+"QIC_24vsIC"= "(QIC.24 - IC.0)",
+"QIC_1vsIC"= "(QIC.1 - IC.0)",
+#"ICvsIA_0"= "(IC.0 - IA.0)", # COMPARACIONES POR PARES NO QUITOSANO, INOCULADO VS TESTIGO
+#"ICvsIA_1"= "(IC.1 - IA.1)",
+#"ICvsIA_69"= "(IC.69 - IA.69)",
+#"ICvsIA_24"= "(IC.24 - IA.24)",
+#"TQIA_1"= "(QIA.1 - QIA.0) -(IA.1 - IA.0)",
+#"TQIA_69"= "(QIA.69 - QIA.0) -(IA.69 - IA.0)",
+#"TQIA_24"= "(QIA.24 - QIA.0) -(IA.24 - IA.0)",
+#"TQIC_1"= "(QIC.1 - QIC.0) -(IC.1 - IC.0)",    # EFECTO DEL  TIEMPO
+#"TQIC_69"= "(QIC.69 - QIC.0) -(IC.69 - IC.0)",
+#"TQIC_24"= "(QIC.24 - QIC.0) -(IC.24 - IC.0)"
+"QIC_0vsIA"= "(QIC.0 - IA.0)", #COMPARACIONES POR PARES QUITOSANO, INOCULADO VS TESTIGO sin inocular
+"QIC_69vsIA"= "(QIC.69 - IA.0)",
+"QIC_24vsIA"= "(QIC.24 - IA.0)",
+"QIC_1vsIA"= "(QIC.1 - IA.0)"
+)
+contMatrix <- makeContrasts(contrasts=contVector, levels=design)
+colnames(contMatrix) <- names(contVector)
+
+#test
+glmfit.all <- glmFit(y, design,dispersion=0.1) 
+
+for (cont in colnames(contMatrix)){
+print(cont)
+lrt.all<-glmLRT(glmfit.all, contrast=contMatrix[,cont])
+print(topTags(lrt.all))
+print(summary(decideTestsDGE(lrt.all, p.value=0.05)))
+top<-topTags(lrt.all, n=nrow(y$counts))
+write.table (top$table[,c(1,5)], file=paste(cont, ".txt", sep=""),sep="\t",col.names=TRUE)
+}
+
+
+

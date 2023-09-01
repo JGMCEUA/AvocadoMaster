@@ -1,0 +1,14 @@
+#!/bin/sh
+###Alineamiento con el Trancriptoma FH Supreme del ensamblador
+#hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH0_1_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH0_1_R2_T_PO.fastq.gz -S FH0_1T.sam &> FH0_1T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH0_2_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH0_2_R2_T_PO.fastq.gz -S FH0_2T.sam &> FH0_2T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH0_3_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH0_3_R2_T_PO.fastq.gz -S FH0_3T.sam &> FH0_3T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH1_1_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH1_1_R2_T_PO.fastq.gz -S FH1_1T.sam &> FH1_1T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH1_2_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH1_2_R2_T_PO.fastq.gz -S FH1_2T.sam &> FH1_2T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH1_3_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH1_3_R2_T_PO.fastq.gz -S FH1_3T.sam &> FH1_3T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH24_1_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH24_1_R2_T_PO.fastq.gz -S FH24_1T.sam &> FH24_1T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH24_2_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH24_2_R2_T_PO.fastq.gz -S FH24_2T.sam &> FH24_2T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH24_3_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH24_3_R2_T_PO.fastq.gz -S FH24_3T.sam &> FH24_3T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH72_1_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH72_1_R2_T_PO.fastq.gz -S FH72_1T.sam &> FH72_1T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH72_2_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH72_2_R2_T_PO.fastq.gz -S FH72_2T.sam &> FH72_2T.txt;
+hisat2 -p 8 --dta -x /home/lbmv/PruebasPost/PaHT -1 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH72_3_R1_T_PO.fastq.gz -2 /home/lbmv/gustavo_maestria/MuestrasT/FrutoHass/PO/FH72_3_R2_T_PO.fastq.gz -S FH72_3T.sam &> FH72_3T.txt;

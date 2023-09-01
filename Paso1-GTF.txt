@@ -1,0 +1,105 @@
+#!/bin/bash
+#Ya que el pprograma no me deja ejectutar el conteo directamente, sr necesario primero ensamblar los archivos y posteriorentee realizar de nuevo el conteo
+#FH0_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH0_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH0_1/FH0_1_PAHCT.sorted.gtf --rf -A ./FH0_1/FH0_1_abundant.tab FH0_1_PAHCT.sorted.bam;
+rm FH0_1_PAHCT.sorted.bam;
+# FH0_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH0_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH0_2/FH0_2_PAHCT.sorted.gtf --rf -A ./FH0_2/FH0_2_abundant.tab FH0_2_PAHCT.sorted.bam;
+rm FH0_2_PAHCT.sorted.bam;
+# FH0_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH0_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH0_3/FH0_3_PAHCT.sorted.gtf --rf -A ./FH0_3/FH0_3_abundant.tab FH0_3_PAHCT.sorted.bam;
+rm FH0_3_PAHCT.sorted.bam;
+
+#FH1_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH1_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH1_1/FH1_1_PAHCT.sorted.gtf --rf -A ./FH1_1/FH1_1_abundant.tab FH1_1_PAHCT.sorted.bam;
+rm FH1_1_PAHCT.sorted.bam;
+# FH1_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH1_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH1_2/FH1_2_PAHCT.sorted.gtf --rf -A ./FH1_2/FH1_2_abundant.tab FH1_2_PAHCT.sorted.bam;
+rm FH1_2_PAHCT.sorted.bam;
+# FH1_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH1_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH1_3/FH1_3_PAHCT.sorted.gtf --rf -A ./FH1_3/FH1_3_abundant.tab FH1_3_PAHCT.sorted.bam;
+rm FH1_3_PAHCT.sorted.bam;
+
+#FH24_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH24_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH24_1/FH24_1_PAHCT.sorted.gtf --rf -A ./FH24_1/FH24_1_abundant.tab FH24_1_PAHCT.sorted.bam;
+rm FH24_1_PAHCT.sorted.bam;
+# FH24_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH24_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH24_2/FH24_2_PAHCT.sorted.gtf --rf -A ./FH24_2/FH24_2_abundant.tab FH24_2_PAHCT.sorted.bam;
+rm FH24_2_PAHCT.sorted.bam;
+# FH24_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH24_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH24_3/FH24_3_PAHCT.sorted.gtf --rf -A ./FH24_3/FH24_3_abundant.tab FH24_3_PAHCT.sorted.bam;
+rm FH24_3_PAHCT.sorted.bam;
+
+#FH72_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH72_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH72_1/FH72_1_PAHCT.sorted.gtf --rf -A ./FH72_1/FH72_1_abundant.tab FH72_1_PAHCT.sorted.bam;
+rm FH72_1_PAHCT.sorted.bam;
+# FH72_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH72_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH72_2/FH72_2_PAHCT.sorted.gtf --rf -A ./FH72_2/FH72_2_abundant.tab FH72_2_PAHCT.sorted.bam;
+rm FH72_2_PAHCT.sorted.bam;
+# FH72_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/FH72_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./FH72_3/FH72_3_PAHCT.sorted.gtf --rf -A ./FH72_3/FH72_3_abundant.tab FH72_3_PAHCT.sorted.bam;
+rm FH72_3_PAHCT.sorted.bam;
+
+#F0_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F0_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F0_1/F0_1_PAHCT.sorted.gtf --rf -A ./F0_1/F0_1_abundant.tab F0_1_PAHCT.sorted.bam;
+rm F0_1_PAHCT.sorted.bam;
+# F0_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F0_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F0_2/F0_2_PAHCT.sorted.gtf --rf -A ./F0_2/F0_2_abundant.tab F0_2_PAHCT.sorted.bam;
+rm F0_2_PAHCT.sorted.bam;
+# F0_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F0_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F0_3/F0_3_PAHCT.sorted.gtf --rf -A ./F0_3/F0_3_abundant.tab F0_3_PAHCT.sorted.bam;
+rm F0_3_PAHCT.sorted.bam;
+
+#F1_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F1_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F1_1/F1_1_PAHCT.sorted.gtf --rf -A ./F1_1/F1_1_abundant.tab F1_1_PAHCT.sorted.bam;
+rm F1_1_PAHCT.sorted.bam;
+# F1_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F1_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F1_2/F1_2_PAHCT.sorted.gtf --rf -A ./F1_2/F1_2_abundant.tab F1_2_PAHCT.sorted.bam;
+rm F1_2_PAHCT.sorted.bam;
+# F1_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F1_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F1_3/F1_3_PAHCT.sorted.gtf --rf -A ./F1_3/F1_3_abundant.tab F1_3_PAHCT.sorted.bam;
+rm F1_3_PAHCT.sorted.bam;
+
+#F24_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F24_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F24_1/F24_1_PAHCT.sorted.gtf --rf -A ./F24_1/F24_1_abundant.tab F24_1_PAHCT.sorted.bam;
+rm F24_1_PAHCT.sorted.bam;
+# F24_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F24_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F24_2/F24_2_PAHCT.sorted.gtf --rf -A ./F24_2/F24_2_abundant.tab F24_2_PAHCT.sorted.bam;
+rm F24_2_PAHCT.sorted.bam;
+# F24_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F24_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F24_3/F24_3_PAHCT.sorted.gtf --rf -A ./F24_3/F24_3_abundant.tab F24_3_PAHCT.sorted.bam;
+rm F24_3_PAHCT.sorted.bam;
+
+#F72_1
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F72_1_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F72_1/F72_1_PAHCT.sorted.gtf --rf -A ./F72_1/F72_1_abundant.tab F72_1_PAHCT.sorted.bam;
+rm F72_1_PAHCT.sorted.bam;
+# F72_2
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F72_2_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F72_2/F72_2_PAHCT.sorted.gtf --rf -A ./F72_2/F72_2_abundant.tab F72_2_PAHCT.sorted.bam;
+rm F72_2_PAHCT.sorted.bam;
+# F72_3
+cp /media/alejandra/AgroBio_Tec/AlineamientoTrinity/bam/F72_3_PAHCT.sorted.bam /home/alejandra/Escritorio/AlinTes2021;
+stringtie -o ./F72_3/F72_3_PAHCT.sorted.gtf --rf -A ./F72_3/F72_3_abundant.tab F72_3_PAHCT.sorted.bam;
+rm F72_3_PAHCT.sorted.bam;

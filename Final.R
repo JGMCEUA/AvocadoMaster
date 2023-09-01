@@ -1,0 +1,33 @@
+####Concatenación Final
+setwd("E:/R/NOCONTAR/CrearGTF/PruebaPy/RT0P")
+Tot <- as.matrix(read.delim("Prueba.txt",header = T, sep = "\t"))
+#colnames(Anotaciones) <- c("#gene_id","transcript_id","sprot_Top_BLASTX_hit","RNAMMER","prot_id","prot_coords","sprot_Top_BLASTP_hit","Pfam","SignalP","TmHMM","eggnog","Kegg"."gene_ontology_blast","gene_ontology_BLASTP","gene_ontology_Pfam","transcript","peptide")
+Tot <- as.data.frame(Tot)
+Res <- data.frame(read.csv("AnotaRepTrans.csv"))
+ResDEG <- left_join(Res,Tot, by="seqnames")
+write.csv(ResDEG,"FINAL.csv")
+
+
+setwd("E:/R/NOCONTAR/CrearGTF/PruebaPy/RT1PPP")
+Tot <- as.matrix(read.delim("Prueba.txt",header = T, sep = "\t"))
+#colnames(Anotaciones) <- c("#gene_id","transcript_id","sprot_Top_BLASTX_hit","RNAMMER","prot_id","prot_coords","sprot_Top_BLASTP_hit","Pfam","SignalP","TmHMM","eggnog","Kegg"."gene_ontology_blast","gene_ontology_BLASTP","gene_ontology_Pfam","transcript","peptide")
+Tot <- as.data.frame(Tot)
+Res <- data.frame(read.csv("AnotaRepTrans.csv"))
+ResDEG <- left_join(Res,Tot, by="seqnames")
+write.csv(ResDEG,"FINAL.csv")
+
+setwd("E:/R/NOCONTAR/CrearGTF/PruebaPy/RT24P")
+Tot <- as.matrix(read.delim("Prueba.txt",header = T, sep = "\t"))
+#colnames(Anotaciones) <- c("#gene_id","transcript_id","sprot_Top_BLASTX_hit","RNAMMER","prot_id","prot_coords","sprot_Top_BLASTP_hit","Pfam","SignalP","TmHMM","eggnog","Kegg"."gene_ontology_blast","gene_ontology_BLASTP","gene_ontology_Pfam","transcript","peptide")
+Tot <- as.data.frame(Tot)
+Res <- data.frame(read.csv("AnotaRepTrans.csv"))
+ResDEG <- left_join(Res,Tot, by="seqnames")
+write.csv(ResDEG,"FINAL.csv")
+
+setwd("E:/R/NOCONTAR/CrearGTF/PruebaPy/RT72P")
+Tot <- as.matrix(read.delim("Prueba.txt",header = T, sep = "\t"))
+#colnames(Anotaciones) <- c("#gene_id","transcript_id","sprot_Top_BLASTX_hit","RNAMMER","prot_id","prot_coords","sprot_Top_BLASTP_hit","Pfam","SignalP","TmHMM","eggnog","Kegg"."gene_ontology_blast","gene_ontology_BLASTP","gene_ontology_Pfam","transcript","peptide")
+Tot <- as.data.frame(Tot)
+Res <- data.frame(read.csv("AnotaRepTrans.csv"))
+ResDEG <- left_join(Res,Tot, by="seqnames")
+write.csv(ResDEG,"FINAL.csv")

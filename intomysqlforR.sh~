@@ -1,0 +1,33 @@
+#!/bin/bash
+#scrip para meter todos lo datos a una base de datos
+# para correr sh ./intomysqlforR.sh muestra
+database=$1
+
+# determinar la ruta y nombre del script
+script=$(cd ${0%/*} && echo $PWD/${0##*/})
+dirscript=`dirname "$script"`
+
+for library in `ls *.txt | sed 's/.txt$//g'`
+do
+#crear tablas
+echo "creando tablas"
+#mysql -u xocanol -p123 -e
+mysql -h localhost -u root -p123 -e "use $database ; create table $library(
+IDE varchar(20),
+Fold$library float (8,3),
+FDR$library decimal(20,5),
+index gen(IDE));"
+
+#haciendo inputs
+#mysql -u xocanol -p123 -e
+#mysql -h localhost -u root -p123 -e
+mysql -h localhost -u root -p123 --local-infile "use $database; load data local infile '$dirscript/$library.txt' into table $library ignore 1 lines;"
+echo "tablas indexadas $library"
+
+done
+
+#revisar el error, no  deja cargar la tablas, posiblemente sea problemas de permisos del mysql
+
+
+
+

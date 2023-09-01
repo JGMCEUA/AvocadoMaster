@@ -1,0 +1,25 @@
+#!/bin/sh
+mv F0_1_PO_fail_f2.fq.1 F0_1_PO_fail_f2.R1.fq;
+mv F0_1_PO_fail_f2.fq.2 F0_1_PO_fail_f2.R2.fq;
+mv F0_2_PO_fail_f2.fq.1 F0_2_PO_fail_f2.R1.fq;
+mv F0_2_PO_fail_f2.fq.2 F0_2_PO_fail_f2.R2.fq;
+mv F0_3_PO_fail_f2.fq.1 F0_3_PO_fail_f2.R1.fq;
+mv F0_3_PO_fail_f2.fq.2 F0_3_PO_fail_f2.R2.fq;
+mv F1_1_PO_fail_f2.fq.1 F1_1_PO_fail_f2.R1.fq;
+mv F1_1_PO_fail_f2.fq.2 F1_1_PO_fail_f2.R2.fq;
+mv F1_2_PO_fail_f2.fq.1 F1_2_PO_fail_f2.R1.fq;
+mv F1_2_PO_fail_f2.fq.2 F1_2_PO_fail_f2.R2.fq;
+mv F1_3_PO_fail_f2.fq.1 F1_3_PO_fail_f2.R1.fq;
+mv F1_3_PO_fail_f2.fq.2 F1_3_PO_fail_f2.R2.fq;
+mv F24_1_PO_fail_f2.fq.1 F24_1_PO_fail_f2.R1.fq;
+mv F24_1_PO_fail_f2.fq.2 F24_1_PO_fail_f2.R2.fq;
+mv F24_2_PO_fail_f2.fq.1 F24_2_PO_fail_f2.R1.fq;
+mv F24_2_PO_fail_f2.fq.2 F24_2_PO_fail_f2.R2.fq;
+mv F24_3_PO_fail_f2.fq.1 F24_3_PO_fail_f2.R1.fq;
+mv F24_3_PO_fail_f2.fq.2 F24_3_PO_fail_f2.R2.fq;
+mv F72_1_PO_fail_f2.fq.1 F72_1_PO_fail_f2.R1.fq;
+mv F72_1_PO_fail_f2.fq.2 F72_1_PO_fail_f2.R2.fq;
+mv F72_2_PO_fail_f2.fq.1 F72_2_PO_fail_f2.R1.fq;
+mv F72_2_PO_fail_f2.fq.2 F72_2_PO_fail_f2.R2.fq;
+mv F72_3_PO_fail_f2.fq.1 F72_3_PO_fail_f2.R1.fq;
+mv F72_3_PO_fail_f2.fq.2 F72_3_PO_fail_f2.R2.fq;
